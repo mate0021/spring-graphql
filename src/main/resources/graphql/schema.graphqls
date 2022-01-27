@@ -1,0 +1,12 @@
+# this file needs to be present in resources/graphql directory for correct context startup
+
+type Book {
+    id: String
+    title: String
+}
+
+type Query {
+    bookById(id: String): Book
+    allBooks: [Book]!
+}
+
