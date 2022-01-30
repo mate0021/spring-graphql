@@ -25,7 +25,7 @@ public class BookDataFetcher {
         };
     }
 
-    public DataFetcher allBooks() {
-        return dataFetchingEnvironment -> null;
+    public DataFetcher<List<Book>> allBooks() {
+        return dataFetchingEnvironment -> books;
     }
 }

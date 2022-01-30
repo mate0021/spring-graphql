@@ -1,1 +1,14 @@
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+#  schema:
+#    printer:
+#      enabled: true
 
+#spring:
+#  graphql:
+#    schema:
+#      printer:
+#        enabled: true
