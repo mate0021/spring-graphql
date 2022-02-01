@@ -6,13 +6,15 @@ import rnd.mate00.springgraphql.model.Book;
 
 import java.util.List;
 
+import static rnd.mate00.springgraphql.model.BookTheme.*;
+
 @Component
 public class BookDataFetcher {
 
     private static List<Book> books = List.of(
-            new Book("1", "book title 1"),
-            new Book("2", "book 2"),
-            new Book("3", "other book")
+            new Book("1", "book title 1", 138, HORROR),
+            new Book("2", "book 2", 200, SPORTS),
+            new Book("3", "other book", 210, FINANCE)
     );
 
     public DataFetcher<Book> getBookByIdDataFetcher() {

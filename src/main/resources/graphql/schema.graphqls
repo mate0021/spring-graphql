@@ -3,6 +3,12 @@
 type Book {
     id: String
     title: String
+    pages: Int
+    theme: BookTheme
+}
+
+type BookTheme {
+    themeName: String
 }
 
 type Query {
