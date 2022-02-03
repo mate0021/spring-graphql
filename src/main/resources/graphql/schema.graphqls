@@ -3,7 +3,8 @@
 type Book {
     id: String
     title: String
-    pages: Int
+    author: String
+    numPages: Int # graphql.PropertyDataFetcher will try to call getter based on this name. They have to match.
     theme: BookTheme
 }
 

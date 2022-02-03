@@ -12,3 +12,7 @@ graphql:
 #    schema:
 #      printer:
 #        enabled: true
+
+logging:
+  level:
+    graphql: DEBUG

@@ -6,13 +6,16 @@ public class Book {
 
     private final String title;
 
+    private final String author;
+
     private final int numPages;
 
     private BookTheme theme;
 
-    public Book(String id, String title, int numPages, BookTheme theme) {
+    public Book(String id, String title, String author, int numPages, BookTheme theme) {
         this.id = id;
         this.title = title;
+        this.author = author;
         this.numPages = numPages;
         this.theme = theme;
     }
@@ -23,6 +26,10 @@ public class Book {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public int getNumPages() {
@@ -38,6 +45,7 @@ public class Book {
         return "Book{" +
                 "id='" + id + '\'' +
                 ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
                 ", numPages=" + numPages +
                 ", theme=" + theme +
                 '}';
