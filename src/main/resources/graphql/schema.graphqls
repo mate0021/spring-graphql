@@ -17,3 +17,14 @@ type Query {
     allBooks: [Book]!
 }
 
+type Mutation {
+    addBook(book: BookInput!): Int!
+}
+
+input BookInput { # this is an input for mutation, so "input", not "type"
+    id: String
+    title: String
+    author: String
+    numPages: Int
+}
+

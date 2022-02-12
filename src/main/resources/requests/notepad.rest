@@ -7,6 +7,15 @@ Content-Type: application/json
 "query":"query { allBooks {id, title, numPages, theme {themeName}} }"
 }
 
+mutation {
+  addBook(book: {
+    id:"234"
+    title:"book title"
+    author:"An Author"
+    numPages: 43
+  })
+}
+
 %%%
 
 # Duration: 16 ms
