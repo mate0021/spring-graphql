@@ -3,10 +3,10 @@ package rnd.mate00.springgraphql.config;
 import graphql.schema.DataFetcher;
 import org.springframework.stereotype.Component;
 import rnd.mate00.springgraphql.model.Book;
-import rnd.mate00.springgraphql.model.BookTheme;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import static rnd.mate00.springgraphql.model.BookTheme.*;
@@ -41,9 +41,10 @@ public class BookDataFetcher {
     public DataFetcher<Book> addBook() {
         return dataFetching -> {
             System.out.println("" + dataFetching.getArgument("book"));
-            Book bookArg = dataFetching.getArgument("book");
-            Book newBook = new Book("42", "empty book", "empty author", 0, REPORT);
+            LinkedHashMap<String, Object> bookArg = dataFetching.getArgument("book");
+            Book newBook = new Book((String) bookArg.get("id"), (String) bookArg.get("title"), (String) bookArg.get("author"), (int) bookArg.get("numPages"), REPORT);
             books.add(newBook);
+            
             return newBook;
         };
     }
