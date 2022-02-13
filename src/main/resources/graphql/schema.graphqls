@@ -18,7 +18,7 @@ type Query {
 }
 
 type Mutation {
-    addBook(book: BookInput!): Int!
+    addBook(book: BookInput!): Book!
 }
 
 input BookInput { # this is an input for mutation, so "input", not "type"
